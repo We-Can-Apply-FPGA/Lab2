@@ -1,0 +1,74 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: ip-generate --project-directory=D:/DClab/lab2/DE2_115/qsys/ --output-directory=D:/DClab/lab2/DE2_115/qsys/ --report-file=bsf:D:/DClab/lab2/DE2_115/qsys/rsa_qsys.bsf --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=D:/DClab/lab2/DE2_115/qsys/rsa_qsys.qsys
+Progress: Loading qsys/rsa_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding altpll_0 [altpll 13.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding uart_0 [altera_avalon_uart 13.1]
+Progress: Parameterizing module uart_0
+Progress: Adding Rsa256Wrapper_0 [Rsa256Wrapper 1.0]
+Progress: Parameterizing module Rsa256Wrapper_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: rsa_qsys.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: rsa_qsys.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.uart_0: Interrupt sender uart_0.irq is not connected to an interrupt receiver
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: ip-generate --project-directory=D:/DClab/lab2/DE2_115/qsys/ --output-directory=D:/DClab/lab2/DE2_115/qsys/synthesis/ --file-set=QUARTUS_SYNTH --report-file=html:D:/DClab/lab2/DE2_115/qsys/rsa_qsys.html --report-file=sopcinfo:D:/DClab/lab2/DE2_115/qsys/rsa_qsys.sopcinfo --report-file=cmp:D:/DClab/lab2/DE2_115/qsys/rsa_qsys.cmp --report-file=qip:D:/DClab/lab2/DE2_115/qsys/synthesis/rsa_qsys.qip --report-file=svd --report-file=regmap:D:/DClab/lab2/DE2_115/qsys/synthesis/rsa_qsys.regmap --report-file=debuginfo:D:/DClab/lab2/DE2_115/qsys/synthesis/rsa_qsys.debuginfo --system-info=DEVICE_FAMILY="Cyclone IV GX" --system-info=DEVICE=Unknown --system-info=DEVICE_SPEEDGRADE=Unknown --component-file=D:/DClab/lab2/DE2_115/qsys/rsa_qsys.qsys --language=VERILOG
+Progress: Loading qsys/rsa_qsys.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 13.1]
+Progress: Parameterizing module clk_0
+Progress: Adding altpll_0 [altpll 13.1]
+Progress: Parameterizing module altpll_0
+Progress: Adding uart_0 [altera_avalon_uart 13.1]
+Progress: Parameterizing module uart_0
+Progress: Adding Rsa256Wrapper_0 [Rsa256Wrapper 1.0]
+Progress: Parameterizing module Rsa256Wrapper_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: rsa_qsys.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: rsa_qsys.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: rsa_qsys.uart_0: Interrupt sender uart_0.irq is not connected to an interrupt receiver
+Info: rsa_qsys: Generating rsa_qsys "rsa_qsys" for QUARTUS_SYNTH
+Info: pipeline_bridge_swap_transform: After transform: 4 modules, 7 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 4 modules, 5 connections
+Info: merlin_translator_transform: After transform: 6 modules, 11 connections
+Info: merlin_clock_and_reset_bridge_transform: After transform: 8 modules, 17 connections
+Info: merlin_hierarchy_transform: After transform: 5 modules, 10 connections
+Info: merlin_mm_transform: After transform: 5 modules, 10 connections
+Info: reset_adaptation_transform: After transform: 7 modules, 14 connections
+Warning: rsa_qsys: "No matching role found for uart_0:s1:dataavailable (dataavailable)"
+Warning: rsa_qsys: "No matching role found for uart_0:s1:readyfordata (readyfordata)"
+Info: altpll_0: "rsa_qsys" instantiated altpll "altpll_0"
+Info: uart_0: Starting RTL generation for module 'rsa_qsys_uart_0'
+Info: uart_0:   Generation command is [exec C:/altera/13.1/quartus/bin/perl/bin/perl.exe -I C:/altera/13.1/quartus/bin/perl/lib -I C:/altera/13.1/quartus/sopc_builder/bin/europa -I C:/altera/13.1/quartus/sopc_builder/bin/perl_lib -I C:/altera/13.1/quartus/sopc_builder/bin -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- C:/altera/13.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=rsa_qsys_uart_0 --dir=C:/Users/JieFang/AppData/Local/Temp/alt6720_5534391917555917249.dir/0012_uart_0_gen/ --quartus_dir=C:/altera/13.1/quartus --verilog --config=C:/Users/JieFang/AppData/Local/Temp/alt6720_5534391917555917249.dir/0012_uart_0_gen//rsa_qsys_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: uart_0: Done RTL generation for module 'rsa_qsys_uart_0'
+Info: uart_0: "rsa_qsys" instantiated altera_avalon_uart "uart_0"
+Info: Rsa256Wrapper_0: "rsa_qsys" instantiated Rsa256Wrapper "Rsa256Wrapper_0"
+Info: pipeline_bridge_swap_transform: After transform: 4 modules, 6 connections
+Info: No custom instruction connections, skipping transform 
+Info: merlin_initial_interconnect_transform: After transform: 0 modules, 0 connections
+Info: No Avalon connections, skipping transform 
+Info: merlin_hierarchy_transform: After transform: 4 modules, 6 connections
+Info: mm_interconnect_0: "rsa_qsys" instantiated altera_merlin_interconnect_wrapper "mm_interconnect_0"
+Info: rst_controller: "rsa_qsys" instantiated altera_reset_controller "rst_controller"
+Info: Rsa256Wrapper_0_avalon_master_0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "Rsa256Wrapper_0_avalon_master_0_translator"
+Info: uart_0_s1_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "uart_0_s1_translator"
+Info: rsa_qsys: Done "rsa_qsys" with 8 modules, 11 files, 129008 bytes
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
