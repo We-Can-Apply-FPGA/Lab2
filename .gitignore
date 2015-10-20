@@ -1,1 +1,6 @@
-DE2_115/db/DE2_115.quiproj.9504.rdr.flock
+*.swp
+db/
+incremental_db/
+output_files/
+simulation/
+unsaved/
