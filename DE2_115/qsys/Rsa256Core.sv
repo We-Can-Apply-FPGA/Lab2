@@ -10,32 +10,59 @@ module Rsa256Core(
 );
 // a ^ e mod n
 
-logic [255:0] o_a_pow_e_r, o_a_pow_e_w;
+logic [256:0] ans_r, ans_w, tmp;
 logic [7:0] now_r, now_w;
-logic o_finished_r, o_finished_w, started_r, started_w;
+logic started_r, started_w, comparing_r, comparing_w;
 
 always_comb begin
-	if (i_start && stated_w == 0) begin
+	started_w = started_r;
+	ans_w = ans_r;
+	now_w = now_r;
+	comparing_w = comparing_r;
+	tmp = 0;
+	if (i_start && !started_r) begin
 		started_w = 1;
-		o_a_pow_e_w = 1;
-	end
-	if (started_r == 1) begin
-		if (i_e & (1<< now_r)) begin
-			o_a_pow_e_w = 
+		ans_w = 0;
+		now_w = 255;
+		comparing_w = 0;
+	end else if (started_r) begin
+		if (comparing_r) begin
+			if (ans_r < i_n)
+				ans_w = ans_r;
+			else
+				ans_w = ans_r - i_n;
+		end else begin
+			tmp = ans_r + i_a;
+			if (i_e & (1 << now_r)) begin
+				if (tmp & 1)
+					ans_w = (tmp + i_n) >> 1;
+				else
+					ans_w = tmp >> 1;
+			end else begin
+				ans_w = ans_w >> 1;
+			end
+			if (now_r == 0) begin
+				started_w = 0;
+			end else
+				now_w = now_r - 1;
 		end
-		now_w = now_r+1;
+		comparing_w = !comparing_r;
 	end
+	o_finished = (now_r == 0);
+	o_a_pow_e = ans_r[255:0];
 end
 
-always_ff @(posedge i_lk or posedge i_rst) begin : statement_label
+always_ff @(posedge i_clk or posedge i_rst) begin : statement_label
 	if (i_rst) begin
-		o_a_pow_e_r <= 0;
-		o_finished_r <= 1;
-		now_r <= 0;
+		started_r <= 0;
+		ans_r <= 0;
+		now_r <= 255;
+		comparing_r <= 0;
 	end else begin
-		o_a_pow_e_r <= o_a_pow_e_w;
-		o_finished_r <= o_finished_w;
+		started_r <= started_w;
+		ans_r <= ans_w;
 		now_r <= now_w;
+		comparing_r <= comparing_w;
 	end
 	
 end : statement_label
