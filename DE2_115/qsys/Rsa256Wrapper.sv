@@ -25,7 +25,7 @@ module Rsa256Wrapper(
 	logic [4:0] avm_address_r, avm_address_w;
 	logic avm_read_r, avm_read_w, avm_write_r, avm_write_w;
 
-	logic rsa_start_r, rsa_start_w;
+	logic rsa_start_r, rsa_start_w, key_ok_r, key_ok_w;
 	logic rsa_finished;
 	logic [255:0] rsa_dec;
 
@@ -63,7 +63,81 @@ module Rsa256Wrapper(
 	endtask
 
 	always_comb begin
-
+		n_w = n_r;
+		e_w = e_r;
+		enc_w = enc_r;
+		dec_w = dec_r;
+		avm_address_w = avm_address_r;
+		avm_read_w = avm_read_r;
+		avm_write_w = avm_write_r;
+		state_w = state_r;
+		bytes_counter_w = bytes_counter_r;
+		rsa_start_w = rsa_start_r;
+		key_ok_w = key_ok_r;
+		case(state_r)
+			S_GET_KEY: begin
+				if (avm_waitrequest == 0) begin
+					if (avm_read_r) begin
+						StartRead(STATUS_BASE);
+						if (!avm_waitrequest && avm_readdata[RX_OK_BIT])
+							state_w = S_GET_DATA;
+					end
+					else if (avm_write_r) begin
+						StartWrite(STATUS_BASE);
+						if (!avm_waitrequest && avm_writedata[TX_OK_BIT])
+							state_w = S_GET_DATA;
+					end
+				end
+			end
+			S_GET_DATA: begin
+				if (!key_ok_r && !avm_waitrequest) begin
+					if (bytes_counter_r < 32)
+						n_w = n_r << 8 + avm_readdata[7:0];
+					else if (bytes_counter_r < 64)
+						e_w = e_r << 8 + avm_readdata[7:0];
+					else begin
+						key_ok_w = 1;
+						bytes_counter_w = 0;
+					end
+					avm_read_w = 1;
+					avm_address_w = STATUS_BASE;
+					state_w = S_GET_KEY;
+				end
+				else begin
+					if (bytes_counter_r < 32 && !avm_waitrequest) begin
+						enc_w = enc_r << 8 + avm_readdata[7:0];
+						avm_read_w = 1;
+						avm_address_w = STATUS_BASE;
+						state_w = S_GET_KEY;
+					end
+					else begin
+						state_w = S_WAIT_CALCULATE;
+						rsa_start_w = 1;
+					end
+				end
+			end
+			S_SEND_DATA: begin
+				if (bytes_counter_r < 31 && !avm_waitrequest) begin
+					dec_w = dec_r << 8;
+					bytes_counter_w  = bytes_counter_r + 1;
+				end;
+				if (bytes_counter_r == 31)
+					bytes_counter_w = 0;
+				avm_read_w = 1;
+				avm_address_w = STATUS_BASE;
+				state_w = S_GET_KEY;
+			end
+			S_WAIT_CALCULATE: begin
+				if (rsa_start_r == 1) begin
+					rsa_start_w = 0;
+				end
+				if (rsa_finished == 1) begin
+					avm_write_w = 1;
+					state_w = S_SEND_DATA;
+					bytes_counter_w = 0;
+				end
+			end
+		endcase
 	end
 
 
@@ -79,6 +153,7 @@ module Rsa256Wrapper(
 			state_r <= S_GET_KEY;
 			bytes_counter_r <= 63;
 			rsa_start_r <= 0;
+			key_ok_r <= 0;
 		end else begin
 			n_r <= n_w;
 			e_r <= e_w;
@@ -90,6 +165,7 @@ module Rsa256Wrapper(
 			state_r <= state_w;
 			bytes_counter_r <= bytes_counter_w;
 			rsa_start_r <= rsa_start_w;
+			key_ok_r <= key_ok_w;
 		end
 	end
 endmodule
