@@ -24,7 +24,7 @@ localparam S_POW_LOOP_READY  = 3;
 localparam S_POW_WAIT_NEEDIT = 4;
 localparam S_POW_LOOP        = 5;
 localparam S_POW_WAIT        = 6;
-//localparam S_POW_END         = 7;
+localparam S_POW_END         = 7;
 
 //Mutiply Block State
 localparam S_MUL_IDLE  = 0;
@@ -40,20 +40,9 @@ logic[15:0] pow_cnt_r,pow_cnt_w,mul_cnt_r,mul_count_w,pre_cnt_r,pre_cnt_w;
 logic[255:0] a256_r,a256_w;
 logic[255:0] ans_r,ans_w;
 logic[255:0] mul_ans_r,mul_ans_w;
-
+logic[255:0] mul_a_r,mul_a_w,mul_b_r,mul_b_w;
+logic[255:0] mul_tmp1,mul_tmp2;
 //task InitCalc;
-//endtask
-
-//task Preprocess;
-	//input [255] beforeshift;
-	//if(pre_cnt_r == 0)begin
-		//pow_state_w = S_POW_LOOP;
-		//pre_cnt_w = 255;
-		//return beforeshift;
-	//end
-	//else begin
-		//pre_cnt_w = pre_cnt_r - 1;
-	//end
 //endtask
 
 always_comb begin
@@ -71,29 +60,32 @@ always_comb begin
 		end
 
 		S_MAIN_CALC:begin
-			if(pow_state_r == S_POW_END)	main_state_w = S_MAIN_IDLE;
+			if(pow_state_r == S_POW_IDLE)	main_state_w = S_MAIN_END;
 		end
 	
-		//S_MAIN_END:begin //reset
-			
-		//end
+		S_MAIN_END:begin //reset
+			o_finished = 1;
+			main_state_w = S_MAIN_IDLE;
+		end
 
 	//Power-Mont Block
 	case(pow_state_r)
 		S_POW_START:begin
-			pow_state_w = S_POW_PREPROCESS;
 			pre_cnt_w = 255;
 			a256_w = a;
+			pow_state_w = S_POW_PREPROCESS;
 		end
 
 		S_POW_PREPROCESS:begin
+			ans_w = 1;
+			//process overflow
 			if(a256_r >= n)	a256_w = a256_r - n;
 			else	a256_w = a256_r;
 
 			if(pre_cnt_r == 0)begin
-				pow_state_w = S_POW_LOOP_READY;
 				pre_cnt_w = 255;//reset
 				pow_cnt_w = 255;
+				pow_state_w = S_POW_LOOP_READY;
 			end
 			else
 				pre_cnt_w = pre_cnt_r - 1;
@@ -102,49 +94,73 @@ always_comb begin
 
 		S_POW_LOOP_READY:begin
 			if(pow_cnt_r == 0)begin
-				pow_state_w = S_POW_END;
+				pow_state_w = S_POW_IDLE;
 			end
 			else begin
-				ans_w = 1;
 				if (e & (1 << pow_cnt_r)) begin //need_it
+					mul_a = ans_w;
+					mul_b = a256_r;
 					pow_state_w = S_POW_WAIT_NEEDIT;
 					mul_state_w = S_MUL_START;
-				end
-				else begin
-					pow_state_w = S_POW_LOOP;
-					mul_state_w = S_MUL_IDLE;
-				end
+				end else pow_state_w = S_POW_LOOP;
 			end
 		end
 
 		S_POW_WAIT_NEEDIT:begin
-			if(mul_state_r == S_MUL_END)begin
+			if(mul_state_r == S_MUL_IDLE)begin
+				ans_w = mul_ans_r;
 				mul_state_r = S_MUL_IDLE;
 				pow_state_r = S_POW_LOOP;
-				ans_w = mul_ans_r;
 			end
 		end
 
 		S_POW_LOOP:begin
+			mul_a = a256_r;
+			mul_b = a256_r;
 			pow_state_w = S_POW_WAIT;
 			mul_state_w = S_MUL_START;
 		end
 
 		S_POW_WAIT:begin
-			if(mul_state_r == S_MUL_END)begin
+			if(mul_state_r == S_MUL_IDLE)begin
 				a256_w = mul_ans_r;
-				pow_state_w = S_POW_LOOP_READY;
 				pow_cnt_w = pow_cnt_r - 1;
+				pow_state_w = S_POW_LOOP_READY;
 			end
 		end
 
 		S_POW_IDLE:begin
-			o_finished = 1;
+			o_a_pow_e = ans_r;
 		end
-
 end
 
-assign o_a_pow_e = ans_r;
+	//Multiply-Mont Block
+	case(mul_state_r)
+		S_MUL_IDLE:begin
+		end
+
+		S_MUL_START:begin
+			mul_cnt_w = 255;
+			mul_state_w = S_MUL_CALC;
+		end
+
+		S_MUL_CALC:begin
+			if(mul_cnt_r == 0) mul_state_w = S_MUL_IDLE;
+			else begin
+				mul_cnt_w = mul_cnt_r - 1;
+				if (mul_b & (1 << mul_cnt_r)) mul_tmp1 = mul_ans_r + mul_a;//needit
+				if (mul_ans_r[0] ) mul_tmp2 = mul_tmp1 + n;
+				mul_ans_w = mul_tmp2 << 1;
+			end
+		end
+
+		S_MUL_END:begin
+			if (mul_ans_r < n) mul_ans_w = mul_ans_r;
+			else mul_ans_w = mul_ans_r - n;
+			mul_state_w = S_MUL_IDLE;
+		end
+
+
 
 always_ff @(posedge i_clk or posedge i_rst) begin
 	if (i_rst) begin
