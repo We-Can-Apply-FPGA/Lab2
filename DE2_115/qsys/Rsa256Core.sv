@@ -6,7 +6,9 @@ module Rsa256Core(
 	input [255:0] i_e,
 	input [255:0] i_n,
 	output [255:0] o_a_pow_e,
-	output o_finished
+	output o_finished,
+	//output o_pow_state,
+	//output o_mul_state,
 );
 // a ^ e mod n
 
@@ -50,6 +52,9 @@ assign e = i_e;
 assign n = i_n;
 assign a = i_a;
 assign o_finished = (main_state_r == S_MAIN_IDLE);
+//assign o_pow_state= pow_state_r;
+//assign o_mul_state = mul_state_r;
+
 always_comb begin
 
 	main_state_w = main_state_r;
@@ -169,12 +174,13 @@ always_comb begin
 		end
 
 		S_MUL_START:begin
+			mul_ans_w = 0;
 			mul_cnt_w = 255;
 			mul_state_w = S_MUL_CALC;
 		end
 
 		S_MUL_CALC:begin
-			if(mul_cnt_r == 0) mul_state_w = S_MUL_IDLE;
+			if(mul_cnt_r == 0) mul_state_w = S_MUL_END;
 			else begin
 				mul_cnt_w = mul_cnt_r - 1;
 				if (mul_b & (1 << mul_cnt_r)) mul_tmp1 = mul_ans_r + mul_a;//needit
@@ -209,11 +215,6 @@ always_ff @(posedge i_clk or posedge i_rst) begin
 		a256_r <=0;
 	end
 	else begin
-		//if (i_start) begin
-		  //a <= i_a;
-		  //e <= i_e;
-		  //n <= i_n;
-		//end
 		main_state_r <= main_state_w;
 		pow_state_r <= pow_state_w;
 		mul_state_r <= mul_state_w;
