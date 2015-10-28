@@ -38,7 +38,7 @@ localparam S_MUL_END   = 3;
 logic[1:0] main_state_r,main_state_w;
 logic[2:0] pow_state_r,pow_state_w;
 logic[1:0] mul_state_r,mul_state_w;
-logic[15:0] pow_cnt_r,pow_cnt_w,mul_cnt_r,mul_cnt_w,pre_cnt_r,pre_cnt_w;
+logic[15:0] pow_cnt_r,pow_cnt_w,mul_cnt_r,mul_cnt_w,pre_cnt_r,pre_cnt_w,post_cnt_r,post_cnt_w;
 logic[255:0] a,e,n;
 logic[255:0] a256_r,a256_w;
 logic[255:0] ans_r,ans_w;
@@ -84,12 +84,14 @@ always_comb begin
 		end
 
 		S_MAIN_CALC:begin
+			post_cnt_w = 255;
 			if(pow_state_r == S_POW_IDLE)begin
 				main_state_w = S_MAIN_END;
 			end
 		end
 	
 		S_MAIN_END:begin //reset
+			
 			main_state_w = S_MAIN_IDLE;
 		end
 	endcase
@@ -164,7 +166,7 @@ always_comb begin
 
 		S_POW_IDLE:begin
 			o_a_pow_e = ans_r;
-			main_state_w = S_POW_IDLE;
+			pow_state_w = S_POW_IDLE;
 		end
 	endcase
 	//Multiply-Mont Block
