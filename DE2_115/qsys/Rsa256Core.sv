@@ -84,7 +84,6 @@ always_comb begin
 		end
 
 		S_MAIN_CALC:begin
-			post_cnt_w = 255;
 			if(pow_state_r == S_POW_IDLE)begin
 				main_state_w = S_MAIN_END;
 			end
