@@ -42,6 +42,7 @@ def mul_mont(a, b, n):
         if ret & 1:
             ret += n
         ret >>= 1
+        print("MUL_ANS is {} , the mul_cnt is {}".format(ret,i))
     return ret if ret<n else ret-n # [0,n) now
 
 def power_mont(a, b, n):
@@ -52,11 +53,14 @@ def power_mont(a, b, n):
         if b & (1<<i):
             ret = mul_mont(ret, a2, n)
         a2 = mul_mont(a2, a2, n)
+        print("current_ans is {} , current pow_cnt is {}".format(ret,i))
     return ret
 
 if __name__ == '__main__':
-    val_n = 0xCA3586E7EA485F3B0A222A4C79F7DD12E85388ECCDEE4035940D774C029CF831
-    val_e = 0x0000000000000000000000000000000000000000000000000000000000010001
+    # val_n = 0xCA3586E7EA485F3B0A222A4C79F7DD12E85388ECCDEE4035940D774C029CF831
+    # val_e = 0x0000000000000000000000000000000000000000000000000000000000010001
+    val_n = 0xB6ACE0B14720169839B15FD13326CF1A1829BEAFC37BB937BEC8802FBCF46BD9
+    val_e = 0xCA3586E7EA485F3B0A222A4C79F7DD12E85388ECCDEE4035940D774C029CF831
     val_d = 0xB6ACE0B14720169839B15FD13326CF1A1829BEAFC37BB937BEC8802FBCF46BD9
     assert len(argv) == 2, "Usage: {} e|d".format(argv[0])
     if argv[1] == 'e':
