@@ -1,0 +1,5 @@
+PLL_Name	Rsa256:my_qsys|Rsa256_altpll_0:altpll_0|Rsa256_altpll_0_altpll_l342:sd1|pll7
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+

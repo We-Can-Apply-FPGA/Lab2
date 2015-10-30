@@ -1,0 +1,60 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate /home/quartus/Lab2/DE2_115/src/Rsa256.qsys --block-symbol-file --output-directory=/home/quartus/Lab2/DE2_115/src/Rsa256 --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading src/Rsa256.qsys
+Progress: Reading input file
+Progress: Adding Rsa256_Wrapper_0 [Rsa256_Wrapper 1.0]
+Progress: Parameterizing module Rsa256_Wrapper_0
+Progress: Adding altpll_0 [altpll 15.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding uart_0 [altera_avalon_uart 15.0]
+Progress: Parameterizing module uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: Rsa256.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.uart_0: Interrupt sender uart_0.irq is not connected to an interrupt receiver
+Warning: Rsa256.Rsa256_Wrapper_0: Rsa256_Wrapper_0.avalon_master_0 must be connected to an Avalon-MM slave
+Warning: Rsa256.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: Rsa256.uart_0: uart_0.s1 must be connected to an Avalon-MM master
+Info: ip-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate /home/quartus/Lab2/DE2_115/src/Rsa256.qsys --synthesis=VERILOG --output-directory=/home/quartus/Lab2/DE2_115/src/Rsa256/synthesis --family="Cyclone IV E" --part=EP4CE115F29C7
+Progress: Loading src/Rsa256.qsys
+Progress: Reading input file
+Progress: Adding Rsa256_Wrapper_0 [Rsa256_Wrapper 1.0]
+Progress: Parameterizing module Rsa256_Wrapper_0
+Progress: Adding altpll_0 [altpll 15.0]
+Progress: Parameterizing module altpll_0
+Progress: Adding clk_0 [clock_source 15.0]
+Progress: Parameterizing module clk_0
+Progress: Adding uart_0 [altera_avalon_uart 15.0]
+Progress: Parameterizing module uart_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: Rsa256.altpll_0: altpll_0.areset_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.altpll_0: altpll_0.locked_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.altpll_0: altpll_0.phasedone_conduit must be exported, or connected to a matching conduit.
+Warning: Rsa256.uart_0: Interrupt sender uart_0.irq is not connected to an interrupt receiver
+Warning: Rsa256.Rsa256_Wrapper_0: Rsa256_Wrapper_0.avalon_master_0 must be connected to an Avalon-MM slave
+Warning: Rsa256.altpll_0: altpll_0.pll_slave must be connected to an Avalon-MM master
+Warning: Rsa256.uart_0: uart_0.s1 must be connected to an Avalon-MM master
+Info: Rsa256: Generating Rsa256 "Rsa256" for QUARTUS_SYNTH
+Info: Rsa256_Wrapper_0: "Rsa256" instantiated Rsa256_Wrapper "Rsa256_Wrapper_0"
+Info: altpll_0: "Rsa256" instantiated altpll "altpll_0"
+Info: uart_0: Starting RTL generation for module 'Rsa256_uart_0'
+Info: uart_0:   Generation command is [exec /home/quartus/altera/15.0/quartus/linux64/perl/bin/perl -I /home/quartus/altera/15.0/quartus/linux64/perl/lib -I /home/quartus/altera/15.0/quartus/sopc_builder/bin/europa -I /home/quartus/altera/15.0/quartus/sopc_builder/bin/perl_lib -I /home/quartus/altera/15.0/quartus/sopc_builder/bin -I /home/quartus/altera/15.0/quartus/../ip/altera/sopc_builder_ip/common -I /home/quartus/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart -- /home/quartus/altera/15.0/quartus/../ip/altera/sopc_builder_ip/altera_avalon_uart/generate_rtl.pl --name=Rsa256_uart_0 --dir=/tmp/alt6737_2904231298534866149.dir/0005_uart_0_gen/ --quartus_dir=/home/quartus/altera/15.0/quartus --verilog --config=/tmp/alt6737_2904231298534866149.dir/0005_uart_0_gen//Rsa256_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: uart_0: Done RTL generation for module 'Rsa256_uart_0'
+Info: uart_0: "Rsa256" instantiated altera_avalon_uart "uart_0"
+Info: rst_controller: "Rsa256" instantiated altera_reset_controller "rst_controller"
+Info: Rsa256: Done "Rsa256" with 5 modules, 8 files
+Info: ip-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

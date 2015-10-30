@@ -1,0 +1,343 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ASYNC_RESET	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    parameter ASYNC_RESET = 1,$/;"	c
+NUM_RESET_INPUTS	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter NUM_RESET_INPUTS              = 6,$/;"	c
+RESET_REQ_EARLY_DSRT_TIME	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter RESET_REQ_EARLY_DSRT_TIME     = 4,$/;"	c
+RESET_REQ_WAIT_TIME	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter RESET_REQ_WAIT_TIME           = 3,$/;"	c
+Rsa256	Rsa256/Rsa256_bb.v	/^module Rsa256 ($/;"	m
+Rsa256	Rsa256/synthesis/Rsa256.v	/^module Rsa256 ($/;"	m
+Rsa256_altpll_0	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^module  Rsa256_altpll_0$/;"	m
+Rsa256_altpll_0_altpll_l342	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^module  Rsa256_altpll_0_altpll_l342$/;"	m
+Rsa256_altpll_0_dffpipe_l2c	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^module  Rsa256_altpll_0_dffpipe_l2c$/;"	m
+Rsa256_altpll_0_stdsync_sv6	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^module  Rsa256_altpll_0_stdsync_sv6$/;"	m
+Rsa256_mm_interconnect_0	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^module Rsa256_mm_interconnect_0 ($/;"	m
+Rsa256_uart_0	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^module Rsa256_uart_0 ($/;"	m
+Rsa256_uart_0_regs	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^module Rsa256_uart_0_regs ($/;"	m
+Rsa256_uart_0_rx	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^module Rsa256_uart_0_rx ($/;"	m
+Rsa256_uart_0_rx_stimulus_source	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^module Rsa256_uart_0_rx_stimulus_source ($/;"	m
+Rsa256_uart_0_tx	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^module Rsa256_uart_0_tx ($/;"	m
+SYNC_DEPTH	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter SYNC_DEPTH                    = 2,$/;"	c
+USE_RESET_REQUEST_IN1	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN1 = 0,$/;"	c
+USE_RESET_REQUEST_IN11	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN11 = 0,$/;"	c
+USE_RESET_REQUEST_IN13	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN13 = 0,$/;"	c
+USE_RESET_REQUEST_IN15	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN15 = 0,$/;"	c
+USE_RESET_REQUEST_IN3	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN3 = 0,$/;"	c
+USE_RESET_REQUEST_IN5	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN5 = 0,$/;"	c
+USE_RESET_REQUEST_IN7	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN7 = 0,$/;"	c
+USE_RESET_REQUEST_IN9	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN9 = 0,$/;"	c
+address	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   [1:0]  address;$/;"	p
+address	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input   [  2: 0] address;$/;"	p
+altera_reset_controller	Rsa256/synthesis/submodules/altera_reset_controller.v	/^module altera_reset_controller$/;"	m
+altera_reset_synchronizer	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^module altera_reset_synchronizer$/;"	m
+altera_reset_synchronizer_int_chain_out	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    reg altera_reset_synchronizer_int_chain_out;$/;"	r
+altpll_0_c0_clk	Rsa256/synthesis/Rsa256.v	/^	wire         altpll_0_c0_clk;                              \/\/ altpll_0:c0 -> [Rsa256_Wrapper_0:avm_clk, mm_interconnect_0:altpll_0_c0_clk, rst_controller:clk, uart_0:clk]$/;"	n
+any_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             any_error;$/;"	n
+areset	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   areset;$/;"	p
+areset	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	tri0   areset;$/;"	n
+baud_clk_en	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              baud_clk_en;$/;"	r
+baud_divisor	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input   [  8: 0] baud_divisor;$/;"	p
+baud_divisor	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output  [  8: 0] baud_divisor;$/;"	p
+baud_divisor	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  8: 0] baud_divisor;$/;"	n
+baud_load_value	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  8: 0] baud_load_value;$/;"	n
+baud_rate_counter	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  8: 0] baud_rate_counter;$/;"	r
+baud_rate_counter_is_zero	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             baud_rate_counter_is_zero;$/;"	n
+begintransfer	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            begintransfer;$/;"	p
+break_detect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            break_detect;$/;"	p
+break_detect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           break_detect;$/;"	p
+break_detect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              break_detect;$/;"	r
+break_detect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             break_detect;$/;"	n
+c0	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   c0;$/;"	p
+chipselect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            chipselect;$/;"	p
+clk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   clk;$/;"	p
+clk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   [4:0]  clk;$/;"	p
+clk	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            clk;$/;"	p
+clk	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input  clk,$/;"	p
+clk_clk	Rsa256/Rsa256_bb.v	/^	input		clk_clk;$/;"	p
+clk_en	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            clk_en;$/;"	p
+clk_en	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             clk_en;$/;"	n
+clock	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   clock;$/;"	p
+clock	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	tri0   clock;$/;"	n
+clrn	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   clrn;$/;"	p
+clrn	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	tri1   clrn;$/;"	n
+control_reg	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  9: 0] control_reg;$/;"	r
+control_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             control_wr_strobe;$/;"	n
+cts_status_bit	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             cts_status_bit;$/;"	n
+d	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   [0:0]  d;$/;"	p
+d1_rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              d1_rx_char_ready;$/;"	r
+d1_stim_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  7: 0] d1_stim_data;$/;"	r
+d1_tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              d1_tx_ready;$/;"	r
+dataavailable	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           dataavailable;$/;"	p
+dataavailable	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             dataavailable;$/;"	n
+dcts_status_bit	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             dcts_status_bit;$/;"	n
+delayed_unxrx_char_readyxx0	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              delayed_unxrx_char_readyxx0;$/;"	r
+delayed_unxrx_in_processxx3	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              delayed_unxrx_in_processxx3;$/;"	r
+delayed_unxsync_rxdxx1	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              delayed_unxsync_rxdxx1;$/;"	r
+delayed_unxsync_rxdxx2	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              delayed_unxsync_rxdxx2;$/;"	r
+delayed_unxtx_readyxx4	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              delayed_unxtx_readyxx4;$/;"	r
+dffe4a	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	[0:0]	dffe4a;$/;"	r
+dffe5a	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	[0:0]	dffe5a;$/;"	r
+dffe6a	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	[0:0]	dffe6a;$/;"	r
+din	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   din;$/;"	p
+divisor_constant	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  8: 0] divisor_constant;$/;"	n
+do_force_break	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            do_force_break;$/;"	p
+do_force_break	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           do_force_break;$/;"	p
+do_force_break	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             do_force_break;$/;"	n
+do_load_shifter	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              do_load_shifter;$/;"	r
+do_send_stim_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             do_send_stim_data;$/;"	n
+do_shift	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             do_shift;$/;"	n
+do_start_rx	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              do_start_rx;$/;"	r
+do_write_char	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             do_write_char;$/;"	n
+dout	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   dout;$/;"	p
+ena	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire ena;$/;"	n
+eop_status_bit	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             eop_status_bit;$/;"	n
+framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            framing_error;$/;"	p
+framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           framing_error;$/;"	p
+framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              framing_error;$/;"	r
+framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             framing_error;$/;"	n
+got_new_char	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             got_new_char;$/;"	n
+half_bit_cell_divisor	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  7: 0] half_bit_cell_divisor;$/;"	n
+ie_any_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_any_error;$/;"	n
+ie_break_detect	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_break_detect;$/;"	n
+ie_framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_framing_error;$/;"	n
+ie_parity_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_parity_error;$/;"	n
+ie_rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_rx_char_ready;$/;"	n
+ie_rx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_rx_overrun;$/;"	n
+ie_tx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_tx_overrun;$/;"	n
+ie_tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_tx_ready;$/;"	n
+ie_tx_shift_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             ie_tx_shift_empty;$/;"	n
+inclk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   [1:0]  inclk;$/;"	p
+inclk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	tri0   [1:0]  inclk;$/;"	n
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in1,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in11,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in13,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in15,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in3,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in5,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in7,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in9,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in1,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in11,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in13,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in15,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in3,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in5,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in7,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in9,$/;"	p
+input	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    input   clk,$/;"	p
+irq	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           irq;$/;"	p
+irq	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              irq;$/;"	r
+irq	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             irq;$/;"	n
+is_break	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             is_break;$/;"	n
+is_framing_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             is_framing_error;$/;"	n
+locked	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   locked;$/;"	p
+merged_reset	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   wire merged_reset;$/;"	n
+merged_reset_req_in	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   wire merged_reset_req_in;$/;"	n
+mm_interconnect_0_uart_0_s1_address	Rsa256/synthesis/Rsa256.v	/^	wire   [2:0] mm_interconnect_0_uart_0_s1_address;          \/\/ mm_interconnect_0:uart_0_s1_address -> uart_0:address$/;"	n
+mm_interconnect_0_uart_0_s1_begintransfer	Rsa256/synthesis/Rsa256.v	/^	wire         mm_interconnect_0_uart_0_s1_begintransfer;    \/\/ mm_interconnect_0:uart_0_s1_begintransfer -> uart_0:begintransfer$/;"	n
+mm_interconnect_0_uart_0_s1_chipselect	Rsa256/synthesis/Rsa256.v	/^	wire         mm_interconnect_0_uart_0_s1_chipselect;       \/\/ mm_interconnect_0:uart_0_s1_chipselect -> uart_0:chipselect$/;"	n
+mm_interconnect_0_uart_0_s1_read	Rsa256/synthesis/Rsa256.v	/^	wire         mm_interconnect_0_uart_0_s1_read;             \/\/ mm_interconnect_0:uart_0_s1_read -> uart_0:read_n$/;"	n
+mm_interconnect_0_uart_0_s1_readdata	Rsa256/synthesis/Rsa256.v	/^	wire  [15:0] mm_interconnect_0_uart_0_s1_readdata;         \/\/ uart_0:readdata -> mm_interconnect_0:uart_0_s1_readdata$/;"	n
+mm_interconnect_0_uart_0_s1_write	Rsa256/synthesis/Rsa256.v	/^	wire         mm_interconnect_0_uart_0_s1_write;            \/\/ mm_interconnect_0:uart_0_s1_write -> uart_0:write_n$/;"	n
+mm_interconnect_0_uart_0_s1_writedata	Rsa256/synthesis/Rsa256.v	/^	wire  [15:0] mm_interconnect_0_uart_0_s1_writedata;        \/\/ mm_interconnect_0:uart_0_s1_writedata -> uart_0:writedata$/;"	n
+module_Rsa256_Wrapper_0	Rsa256/Rsa256.html	/^  <a name="module_Rsa256_Wrapper_0"> <\/a>$/;"	a
+module_altpll_0	Rsa256/Rsa256.html	/^  <a name="module_altpll_0"> <\/a>$/;"	a
+module_clk_0	Rsa256/Rsa256.html	/^  <a name="module_clk_0"> <\/a>$/;"	a
+module_uart_0	Rsa256/Rsa256.html	/^  <a name="module_uart_0"> <\/a>$/;"	a
+output	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    output reg reset_out,$/;"	p
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter ADAPT_RESET_REQUEST          = 0$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter MIN_RST_ASSERTION_TIME        = 11,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter OUTPUT_RESET_SYNC_EDGES       = "deassert",$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter RESET_REQUEST_PRESENT         = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN0 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN10 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN12 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN14 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN2 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN4 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN6 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    parameter USE_RESET_REQUEST_IN8 = 0,$/;"	c
+parameter	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    parameter DEPTH       = 2$/;"	c
+parity_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            parity_error;$/;"	p
+parity_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           parity_error;$/;"	p
+parity_error	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             parity_error;$/;"	n
+pfdena_reg	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	pfdena_reg;$/;"	r
+phasedone	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   phasedone;$/;"	p
+pickup_pulse	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             pickup_pulse;$/;"	n
+pll_lock_sync	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	pll_lock_sync;$/;"	r
+pre_txd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              pre_txd;$/;"	r
+prev_reset	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	reg	prev_reset;$/;"	r
+prn	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire prn;$/;"	n
+q	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   [0:0]  q;$/;"	p
+qualified_irq	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             qualified_irq;$/;"	n
+r_early_rst	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   reg                                          r_early_rst;$/;"	r
+r_sync_rst	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   reg                                          r_sync_rst;$/;"	r
+r_sync_rst_chain	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   reg [ASSERTION_CHAIN_LENGTH-1: 0]            r_sync_rst_chain;$/;"	r
+raw_data_in	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  7: 0] raw_data_in;$/;"	n
+read	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   read;$/;"	p
+read_n	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            read_n;$/;"	p
+readdata	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	output   [31:0]  readdata;$/;"	p
+readdata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output  [ 15: 0] readdata;$/;"	p
+readdata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [ 15: 0] readdata;$/;"	r
+readdata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [ 15: 0] readdata;$/;"	n
+readyfordata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           readyfordata;$/;"	p
+readyfordata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             readyfordata;$/;"	n
+reg	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    output reg reset_req$/;"	p
+reset	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   reset;$/;"	p
+reset_in	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    input   reset_in \/* synthesis ALTERA_ATTRIBUTE = "SUPPRESS_DA_RULE_INTERNAL=R101" *\/,$/;"	p
+reset_in0	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in0,$/;"	p
+reset_in10	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in10,$/;"	p
+reset_in12	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in12,$/;"	p
+reset_in14	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in14,$/;"	p
+reset_in2	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in2,$/;"	p
+reset_in4	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in4,$/;"	p
+reset_in6	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in6,$/;"	p
+reset_in8	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_in8,$/;"	p
+reset_n	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   reset_n;$/;"	p
+reset_n	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            reset_n;$/;"	p
+reset_out	Rsa256/synthesis/submodules/altera_reset_synchronizer.v	/^    output  reset_out$/;"	p
+reset_out_pre	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   wire reset_out_pre;$/;"	n
+reset_out_pre2	Rsa256/synthesis/submodules/altera_reset_controller.v	/^        wire reset_out_pre2;$/;"	n
+reset_req_in0	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in0,$/;"	p
+reset_req_in10	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in10,$/;"	p
+reset_req_in12	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in12,$/;"	p
+reset_req_in14	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in14,$/;"	p
+reset_req_in2	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in2,$/;"	p
+reset_req_in4	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in4,$/;"	p
+reset_req_in6	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in6,$/;"	p
+reset_req_in8	Rsa256/synthesis/submodules/altera_reset_controller.v	/^    input reset_req_in8,$/;"	p
+reset_req_pre	Rsa256/synthesis/submodules/altera_reset_controller.v	/^   wire reset_req_pre;$/;"	n
+reset_reset_n	Rsa256/Rsa256_bb.v	/^	input		reset_reset_n;$/;"	p
+rsa256_debug_num	Rsa256/synthesis/Rsa256.v	/^	wire [31:0] rsa256_debug_num;$/;"	n
+rsa256_wrapper_0_avalon_master_0_address	Rsa256/synthesis/Rsa256.v	/^	wire   [4:0] rsa256_wrapper_0_avalon_master_0_address;     \/\/ Rsa256_Wrapper_0:avm_address -> mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_address$/;"	n
+rsa256_wrapper_0_avalon_master_0_read	Rsa256/synthesis/Rsa256.v	/^	wire         rsa256_wrapper_0_avalon_master_0_read;        \/\/ Rsa256_Wrapper_0:avm_read -> mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_read$/;"	n
+rsa256_wrapper_0_avalon_master_0_readdata	Rsa256/synthesis/Rsa256.v	/^	wire  [31:0] rsa256_wrapper_0_avalon_master_0_readdata;    \/\/ mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_readdata -> Rsa256_Wrapper_0:avm_readdata$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_address	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire   [4:0] rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_address;       \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_address -> uart_0_s1_translator:uav_address$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_burstcount	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire   [2:0] rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_burstcount;    \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_burstcount -> uart_0_s1_translator:uav_burstcount$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_byteenable	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire   [3:0] rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_byteenable;    \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_byteenable -> uart_0_s1_translator:uav_byteenable$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_debugaccess	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_debugaccess;   \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_debugaccess -> uart_0_s1_translator:uav_debugaccess$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_lock	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_lock;          \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_lock -> uart_0_s1_translator:uav_lock$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_read	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_read;          \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_read -> uart_0_s1_translator:uav_read$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_readdata	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire  [31:0] rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_readdata;      \/\/ uart_0_s1_translator:uav_readdata -> Rsa256_Wrapper_0_avalon_master_0_translator:uav_readdata$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_readdatavalid	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_readdatavalid; \/\/ uart_0_s1_translator:uav_readdatavalid -> Rsa256_Wrapper_0_avalon_master_0_translator:uav_readdatavalid$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_waitrequest	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_waitrequest;   \/\/ uart_0_s1_translator:uav_waitrequest -> Rsa256_Wrapper_0_avalon_master_0_translator:uav_waitrequest$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_write	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire         rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_write;         \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_write -> uart_0_s1_translator:uav_write$/;"	n
+rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_writedata	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^	wire  [31:0] rsa256_wrapper_0_avalon_master_0_translator_avalon_universal_master_0_writedata;     \/\/ Rsa256_Wrapper_0_avalon_master_0_translator:uav_writedata -> uart_0_s1_translator:uav_writedata$/;"	n
+rsa256_wrapper_0_avalon_master_0_waitrequest	Rsa256/synthesis/Rsa256.v	/^	wire         rsa256_wrapper_0_avalon_master_0_waitrequest; \/\/ mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_waitrequest -> Rsa256_Wrapper_0:avm_waitrequest$/;"	n
+rsa256_wrapper_0_avalon_master_0_write	Rsa256/synthesis/Rsa256.v	/^	wire         rsa256_wrapper_0_avalon_master_0_write;       \/\/ Rsa256_Wrapper_0:avm_write -> mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_write$/;"	n
+rsa256_wrapper_0_avalon_master_0_writedata	Rsa256/synthesis/Rsa256.v	/^	wire  [31:0] rsa256_wrapper_0_avalon_master_0_writedata;   \/\/ Rsa256_Wrapper_0:avm_writedata -> mm_interconnect_0:Rsa256_Wrapper_0_avalon_master_0_writedata$/;"	n
+rst_controller_001_reset_out_reset	Rsa256/synthesis/Rsa256.v	/^	wire         rst_controller_001_reset_out_reset;           \/\/ rst_controller_001:reset_out -> altpll_0:reset$/;"	n
+rst_controller_reset_out_reset	Rsa256/synthesis/Rsa256.v	/^	wire         rst_controller_reset_out_reset;               \/\/ rst_controller:reset_out -> [Rsa256_Wrapper_0:avm_rst, mm_interconnect_0:Rsa256_Wrapper_0_reset_sink_reset_bridge_in_reset_reset, uart_0:reset_n]$/;"	n
+rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            rx_char_ready;$/;"	p
+rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           rx_char_ready;$/;"	p
+rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              rx_char_ready;$/;"	r
+rx_char_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rx_char_ready;$/;"	n
+rx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input   [  7: 0] rx_data;$/;"	p
+rx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output  [  7: 0] rx_data;$/;"	p
+rx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  7: 0] rx_data;$/;"	r
+rx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  7: 0] rx_data;$/;"	n
+rx_in_process	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rx_in_process;$/;"	n
+rx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            rx_overrun;$/;"	p
+rx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           rx_overrun;$/;"	p
+rx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              rx_overrun;$/;"	r
+rx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rx_overrun;$/;"	n
+rx_rd_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            rx_rd_strobe;$/;"	p
+rx_rd_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           rx_rd_strobe;$/;"	p
+rx_rd_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rx_rd_strobe;$/;"	n
+rx_rd_strobe_onset	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rx_rd_strobe_onset;$/;"	n
+rxd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            rxd;$/;"	p
+rxd_edge	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rxd_edge;$/;"	n
+rxd_falling	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             rxd_falling;$/;"	n
+rxd_shift_reg	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  9: 0] rxd_shift_reg;$/;"	n
+sample_enable	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             sample_enable;$/;"	n
+sclr	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire sclr;$/;"	n
+selected_read_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [ 15: 0] selected_read_data;$/;"	n
+shift_done	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             shift_done;$/;"	n
+shift_reg_start_bit_n	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             shift_reg_start_bit_n;$/;"	n
+source_rxd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           source_rxd;$/;"	p
+source_rxd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             source_rxd;$/;"	n
+status_reg	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [ 12: 0] status_reg;$/;"	n
+status_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            status_wr_strobe;$/;"	p
+status_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           status_wr_strobe;$/;"	p
+status_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             status_wr_strobe;$/;"	n
+stim_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  7: 0] stim_data;$/;"	n
+stop_bit	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             stop_bit;$/;"	n
+sync_rxd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             sync_rxd;$/;"	n
+tx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input   [  7: 0] tx_data;$/;"	p
+tx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output  [  7: 0] tx_data;$/;"	p
+tx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  7: 0] tx_data;$/;"	r
+tx_data	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  7: 0] tx_data;$/;"	n
+tx_load_val	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  9: 0] tx_load_val;$/;"	n
+tx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            tx_overrun;$/;"	p
+tx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           tx_overrun;$/;"	p
+tx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              tx_overrun;$/;"	r
+tx_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_overrun;$/;"	n
+tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            tx_ready;$/;"	p
+tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           tx_ready;$/;"	p
+tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              tx_ready;$/;"	r
+tx_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_ready;$/;"	n
+tx_shift_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            tx_shift_empty;$/;"	p
+tx_shift_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           tx_shift_empty;$/;"	p
+tx_shift_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              tx_shift_empty;$/;"	r
+tx_shift_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_shift_empty;$/;"	n
+tx_shift_reg_out	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_shift_reg_out;$/;"	n
+tx_shift_register_contents	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  9: 0] tx_shift_register_contents;$/;"	n
+tx_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            tx_wr_strobe;$/;"	p
+tx_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           tx_wr_strobe;$/;"	p
+tx_wr_strobe	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_wr_strobe;$/;"	n
+tx_wr_strobe_onset	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             tx_wr_strobe_onset;$/;"	n
+txd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  output           txd;$/;"	p
+txd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg              txd;$/;"	r
+txd	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             txd;$/;"	n
+uart_0_external_connection_rxd	Rsa256/Rsa256_bb.v	/^	input		uart_0_external_connection_rxd;$/;"	p
+uart_0_external_connection_txd	Rsa256/Rsa256_bb.v	/^	output		uart_0_external_connection_txd;$/;"	p
+unused_empty	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             unused_empty;$/;"	n
+unused_overrun	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             unused_overrun;$/;"	n
+unused_ready	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             unused_ready;$/;"	n
+unused_start_bit	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire             unused_start_bit;$/;"	n
+unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_in	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_in;$/;"	n
+unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  9: 0] unxshiftxrxd_shift_regxshift_reg_start_bit_nxx6_out;$/;"	r
+unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_in	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  wire    [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_in;$/;"	n
+unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  reg     [  9: 0] unxshiftxtx_shift_register_contentsxtx_shift_reg_outxx5_out;$/;"	r
+w_locked	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_locked;$/;"	n
+w_pfdena	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_pfdena;$/;"	n
+w_phasedone	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_phasedone;$/;"	n
+w_pll_areset_in	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_pll_areset_in;$/;"	n
+w_reset	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_reset;$/;"	n
+w_select_control	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_select_control;$/;"	n
+w_select_status	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  w_select_status;$/;"	n
+wire	Rsa256/synthesis/Rsa256.v	/^		input  wire  clk_clk,                        \/\/                        clk.clk$/;"	p
+wire	Rsa256/synthesis/Rsa256.v	/^		input  wire  reset_reset_n,                  \/\/                      reset.reset_n$/;"	p
+wire	Rsa256/synthesis/Rsa256.v	/^		input  wire  uart_0_external_connection_rxd, \/\/ uart_0_external_connection.rxd$/;"	p
+wire	Rsa256/synthesis/Rsa256.v	/^		output wire  uart_0_external_connection_txd, \/\/                           .txd$/;"	p
+wire	Rsa256/synthesis/Rsa256.v	/^		output wire [31:0] debug_num$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire        Rsa256_Wrapper_0_avalon_master_0_read,                   \/\/                                                  .read$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire        Rsa256_Wrapper_0_avalon_master_0_write,                  \/\/                                                  .write$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire        Rsa256_Wrapper_0_reset_sink_reset_bridge_in_reset_reset, \/\/ Rsa256_Wrapper_0_reset_sink_reset_bridge_in_reset.reset$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire        altpll_0_c0_clk,                                         \/\/                                       altpll_0_c0.clk$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire [15:0] uart_0_s1_readdata,                                      \/\/                                                  .readdata$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire [31:0] Rsa256_Wrapper_0_avalon_master_0_writedata,              \/\/                                                  .writedata$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		input  wire [4:0]  Rsa256_Wrapper_0_avalon_master_0_address,                \/\/                  Rsa256_Wrapper_0_avalon_master_0.address$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire        Rsa256_Wrapper_0_avalon_master_0_waitrequest,            \/\/                                                  .waitrequest$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire        uart_0_s1_begintransfer,                                 \/\/                                                  .begintransfer$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire        uart_0_s1_chipselect                                     \/\/                                                  .chipselect$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire        uart_0_s1_read,                                          \/\/                                                  .read$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire        uart_0_s1_write,                                         \/\/                                                  .write$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire [15:0] uart_0_s1_writedata,                                     \/\/                                                  .writedata$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire [2:0]  uart_0_s1_address,                                       \/\/                                         uart_0_s1.address$/;"	p
+wire	Rsa256/synthesis/submodules/Rsa256_mm_interconnect_0.v	/^		output wire [31:0] Rsa256_Wrapper_0_avalon_master_0_readdata,               \/\/                                                  .readdata$/;"	p
+wire_dffpipe3_q	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  [0:0]   wire_dffpipe3_q;$/;"	n
+wire_pfdena_reg_ena	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire	wire_pfdena_reg_ena;$/;"	n
+wire_pll7_clk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  [4:0]   wire_pll7_clk;$/;"	n
+wire_pll7_fbout	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  wire_pll7_fbout;$/;"	n
+wire_pll7_locked	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  wire_pll7_locked;$/;"	n
+wire_sd1_clk	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  [4:0]   wire_sd1_clk;$/;"	n
+wire_sd1_locked	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  wire_sd1_locked;$/;"	n
+wire_stdsync2_dout	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	wire  wire_stdsync2_dout;$/;"	n
+write	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   write;$/;"	p
+write_n	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input            write_n;$/;"	p
+writedata	Rsa256/synthesis/submodules/Rsa256_altpll_0.v	/^	input   [31:0]  writedata;$/;"	p
+writedata	Rsa256/synthesis/submodules/Rsa256_uart_0.v	/^  input   [ 15: 0] writedata;$/;"	p
