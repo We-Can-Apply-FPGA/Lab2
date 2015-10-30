@@ -8,7 +8,7 @@ module tb;
 	initial clk = 0;
 	always #HCLK clk = ~clk;
 	logic [255:0] encrypted_data, decrypted_data;
-	logic [247:0] encrypted_data_gold;
+	logic [247:0] golden;
 	integer fp_e, fp_d;
 
 	Rsa256Core core(
@@ -35,7 +35,7 @@ module tb;
 				@(posedge clk);
 			end
 			$fread(encrypted_data, fp_e);
-			$fread(decrypted_data, fp_d);
+			$fread(golden, fp_d);
 			$display("=========");
 			$display("enc  %2d = %64x", i, encrypted_data);
 			$display("=========");
@@ -46,7 +46,7 @@ module tb;
 			@(posedge fin)
 			$display("=========");
 			$display("dec  %2d = %64x", i, decrypted_data);
-			$display("gold %2d = %64x", i, decrypted_data);
+			$display("gold %2d = %64x", i, golden);
 			$display("=========");
 		end
 		$finish;

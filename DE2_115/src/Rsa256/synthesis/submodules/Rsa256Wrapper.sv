@@ -22,11 +22,11 @@ module Rsa256Wrapper(
 	localparam S_SEND_DATA = 4;
 	localparam S_IDLE = 5;
 
-	logic [31:0] debug_r, debug_w;
 	logic [255:0] n_r, n_w, e_r, e_w, enc_r, enc_w, dec_r, dec_w;
 	logic [2:0] state_r, state_w;
 	logic [6:0] bytes_counter_r, bytes_counter_w;
 	logic [4:0] avm_address_r, avm_address_w;
+	logic [31:0] debug_r, debug_w;
 	logic avm_read_r, avm_read_w, avm_write_r, avm_write_w;
 
 	logic rsa_start_r, rsa_start_w, key_ok_r, key_ok_w;
@@ -49,7 +49,6 @@ module Rsa256Wrapper(
 		.i_n(n_r),
 		.o_a_pow_e(rsa_dec),
 		.o_finished(rsa_finished)
-		//.debug_num(debug_num)
 	);
 	
 	task StartRead;
